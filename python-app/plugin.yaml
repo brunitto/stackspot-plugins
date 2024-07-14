@@ -1,0 +1,25 @@
+schema-version: v2
+kind: plugin
+metadata:
+  name: python-app
+  display-name: python-app
+  description: A simple plugin that creates a Python application.
+  version: 0.0.1
+spec:
+  type: app
+  compatibility:
+    - python
+  docs:
+    pt-br: docs/pt-br/docs.md
+    en-us: docs/en-us/docs.md
+  single-use: False
+  technologies: # Ref: https://docs.stackspot.com/create-use/create-content/yaml-files/plugin-yaml/#technologies-1
+    - python
+  stk-projects-only: false
+  inputs:
+    - label: Application Name
+      name: application_name
+      type: text
+      required: true
+      default: my-app
+      help: 'Set the application name, using lowercase and hyphens (e.g.: my-app).'
