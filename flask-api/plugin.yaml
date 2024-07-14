@@ -1,0 +1,26 @@
+schema-version: v2
+kind: plugin
+metadata:
+  name: flask-api
+  display-name: flask-api
+  description: A simple plugin that creates a Flask API.
+  version: 0.0.2
+spec:
+  type: app
+  compatibility:
+    - python
+  docs:
+    pt-br: docs/pt-br/docs.md
+    en-us: docs/en-us/docs.md
+  single-use: False
+  technologies: # Ref: https://docs.stackspot.com/create-use/create-content/yaml-files/plugin-yaml/#technologies-1
+    - Python
+    - Api
+  stk-projects-only: false
+  inputs:
+    - label: API Name
+      name: api_name
+      type: text
+      required: true
+      default: my-api
+      help: 'Set the API name, using lowercase and hyphens (e.g.: my-api).'
