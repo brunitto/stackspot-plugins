@@ -1,0 +1,38 @@
+schema-version: v2
+kind: plugin
+metadata:
+  name: editorconfig
+  display-name: editorconfig
+  description: A simple plugin that configures EditorConfig.
+  version: 0.0.3
+spec:
+  type: app
+  compatibility:
+    - python
+  docs:
+    pt-br: docs/pt-br/docs.md
+    en-us: docs/en-us/docs.md
+  single-use: False
+  technologies: # Ref: https://docs.stackspot.com/create-use/create-content/yaml-files/plugin-yaml/#technologies-1
+    - Web
+  stk-projects-only: false
+  inputs:
+    - label: Indentation Style
+      name: indent_style
+      type: select
+      required: true
+      default: 'space'
+      items:
+        - 'space'
+        - 'tabs'
+      help: 'Choose the indentation style.'
+    - label: Indentation Size
+      name: indent_size
+      type: select
+      required: true
+      default: '4'
+      items:
+        - '2'
+        - '4'
+        - '8'
+      help: 'Choose the indentation size.'
